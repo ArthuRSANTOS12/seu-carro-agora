@@ -1,8 +1,6 @@
 import { Star } from "lucide-react";
-
 const SocialProofSection = () => {
-  return (
-    <section className="py-16 md:py-24 bg-muted">
+  return <section className="py-16 md:py-24 bg-muted">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -17,10 +15,7 @@ const SocialProofSection = () => {
           {/* Video Container */}
           <div className="rounded-2xl overflow-hidden shadow-card bg-card">
             <div className="aspect-video bg-gradient-to-br from-primary to-navy-dark">
-              <video 
-                className="w-full h-full object-cover"
-                controls
-              >
+              <video className="w-full h-full object-cover" controls>
                 <source src="/videos/entrega-corolla-2025.mp4" type="video/mp4" />
                 Seu navegador não suporta vídeos.
               </video>
@@ -30,13 +25,11 @@ const SocialProofSection = () => {
           {/* Video Label - Below Video */}
           <div className="mt-6 bg-card/90 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-soft">
             <div className="flex items-center gap-2 mb-2">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 md:w-5 md:h-5 text-yellow-500 fill-yellow-500" />
-              ))}
+              {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 md:w-5 md:h-5 text-yellow-500 fill-yellow-500" />)}
             </div>
             <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">Entrega do COROLLA 2025</h3>
             <p className="text-sm md:text-base text-muted-foreground">
-              Cliente satisfeito! Processo rápido e sem burocracia.
+              Cliente contemplado pelo sorteio mensal DAN CAR      
             </p>
           </div>
 
@@ -57,8 +50,6 @@ const SocialProofSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SocialProofSection;
