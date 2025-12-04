@@ -144,59 +144,60 @@ const VehicleCard = ({ vehicle }: { vehicle: Vehicle }) => {
   const whatsappLink = `https://wa.me/553891307991?text=Ol%C3%A1!%20Tenho%20interesse%20no%20${encodeURIComponent(vehicle.name)}%20${vehicle.year}.`;
 
   return (
-    <div className="bg-card rounded-2xl shadow-card-hover overflow-hidden border border-border transition-transform hover:scale-[1.02] duration-300">
+    <div className="bg-card rounded-xl sm:rounded-2xl shadow-card-hover overflow-hidden border border-border transition-transform hover:scale-[1.02] duration-300">
       {/* Image Section */}
-      <div className="relative h-48">
+      <div className="relative h-36 sm:h-44 md:h-48">
         <img
           src={vehicle.image}
           alt={vehicle.name}
           className="w-full h-full object-cover"
           style={vehicle.name === "FIAT MILLE" ? { objectPosition: "center 70%" } : undefined}
         />
-        <div className="absolute top-3 left-3 bg-accent text-accent-foreground px-2.5 py-1 rounded-full text-xs font-semibold">
+        <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-accent text-accent-foreground px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold">
           {vehicle.badge}
         </div>
       </div>
 
       {/* Info Section */}
-      <div className="p-5">
-        <h3 className="text-xl font-bold text-foreground mb-1">{vehicle.name}</h3>
-        <p className="text-muted-foreground text-sm mb-4">{vehicle.model}</p>
+      <div className="p-3 sm:p-4 md:p-5">
+        <h3 className="text-sm sm:text-base md:text-xl font-bold text-foreground mb-0.5 sm:mb-1 line-clamp-1">{vehicle.name}</h3>
+        <p className="text-muted-foreground text-xs sm:text-sm mb-2 sm:mb-4 line-clamp-1">{vehicle.model}</p>
 
         {/* Features */}
-        <div className="flex flex-wrap gap-3 mb-4">
+        <div className="flex flex-wrap gap-1.5 sm:gap-3 mb-2 sm:mb-4">
           {features.map((feature, index) => (
-            <div key={index} className="flex items-center gap-1.5 text-foreground/80">
-              <feature.icon className="w-3.5 h-3.5 text-accent" />
-              <span className="text-xs">{feature.label}</span>
+            <div key={index} className="flex items-center gap-1 sm:gap-1.5 text-foreground/80">
+              <feature.icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-accent" />
+              <span className="text-[10px] sm:text-xs">{feature.label}</span>
             </div>
           ))}
         </div>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-1.5 mb-4">
+        <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-2 sm:mb-4">
           {vehicle.tags.map((tag, index) => (
             <span
               key={index}
-              className="inline-flex items-center gap-1 bg-accent/10 text-accent px-2 py-1 rounded-full text-xs font-medium"
+              className="inline-flex items-center gap-0.5 sm:gap-1 bg-accent/10 text-accent px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium"
             >
-              <Check className="w-3 h-3" />
+              <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
               {tag}
             </span>
           ))}
         </div>
 
         {/* Price */}
-        <div className="mb-4">
-          <p className="text-xs text-muted-foreground mb-0.5">A partir de</p>
-          <p className="text-2xl font-bold text-primary">{vehicle.price}</p>
+        <div className="mb-2 sm:mb-4">
+          <p className="text-[10px] sm:text-xs text-muted-foreground mb-0.5">A partir de</p>
+          <p className="text-lg sm:text-xl md:text-2xl font-bold text-primary">{vehicle.price}</p>
         </div>
 
         {/* CTA */}
-        <Button variant="accent" size="sm" className="w-full" asChild>
+        <Button variant="accent" size="sm" className="w-full text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2" asChild>
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="w-4 h-4" />
-            Dar Entrada + Promissória
+            <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="hidden xs:inline">Dar Entrada + Promissória</span>
+            <span className="xs:hidden">Tenho Interesse</span>
           </a>
         </Button>
       </div>
@@ -206,23 +207,23 @@ const VehicleCard = ({ vehicle }: { vehicle: Vehicle }) => {
 
 const VehicleHighlight = () => {
   return (
-    <section id="veiculos" className="py-20 md:py-28 bg-muted/50">
+    <section id="veiculos" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-muted/50">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
             Nosso Estoque
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Veículos <span className="text-accent">Disponíveis</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
             Confira nossa seleção de veículos seminovos com as melhores condições.
           </p>
         </div>
 
         {/* Vehicles Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {vehicles.map((vehicle) => (
             <VehicleCard key={vehicle.id} vehicle={vehicle} />
           ))}

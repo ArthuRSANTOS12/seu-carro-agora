@@ -29,19 +29,19 @@ const SocialProofSection = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   return (
-    <section className="py-16 md:py-24 bg-muted">
+    <section className="py-12 sm:py-16 md:py-24 bg-muted">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
             Clientes <span className="text-accent">Realizados</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Veja a alegria de quem já realizou o sonho do carro próprio com a Dan Car
           </p>
         </div>
 
         {/* Video Grid */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {videos.map((video) => (
             <div
               key={video.id}
@@ -67,14 +67,14 @@ const SocialProofSection = () => {
                 </div>
 
                 {/* Video Info */}
-                <div className="p-4">
-                  <div className="flex items-center gap-1 mb-2">
+                <div className="p-2 sm:p-4">
+                  <div className="flex items-center gap-0.5 sm:gap-1 mb-1 sm:mb-2">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 text-yellow-500 fill-yellow-500" />
+                      <Star key={i} className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-yellow-500 fill-yellow-500" />
                     ))}
                   </div>
-                  <h3 className="font-bold text-foreground text-sm mb-1">{video.title}</h3>
-                  <p className="text-xs text-muted-foreground">{video.description}</p>
+                  <h3 className="font-bold text-foreground text-xs sm:text-sm mb-0.5 sm:mb-1 line-clamp-1">{video.title}</h3>
+                  <p className="text-[10px] sm:text-xs text-muted-foreground line-clamp-2">{video.description}</p>
                 </div>
               </div>
             </div>
@@ -110,18 +110,18 @@ const SocialProofSection = () => {
         )}
 
         {/* Stats */}
-        <div className="max-w-4xl mx-auto grid grid-cols-3 gap-4 mt-12">
-          <div className="text-center p-4 bg-card rounded-xl shadow-soft">
-            <div className="text-2xl md:text-3xl font-bold text-accent">500+</div>
-            <div className="text-sm text-muted-foreground">Carros Vendidos</div>
+        <div className="max-w-4xl mx-auto grid grid-cols-3 gap-2 sm:gap-4 mt-8 sm:mt-12">
+          <div className="text-center p-2 sm:p-4 bg-card rounded-lg sm:rounded-xl shadow-card">
+            <div className="text-lg sm:text-2xl md:text-3xl font-bold text-accent">500+</div>
+            <div className="text-xs sm:text-sm text-muted-foreground">Carros Vendidos</div>
           </div>
-          <div className="text-center p-4 bg-card rounded-xl shadow-soft">
-            <div className="text-2xl md:text-3xl font-bold text-accent">98%</div>
-            <div className="text-sm text-muted-foreground">Satisfação</div>
+          <div className="text-center p-2 sm:p-4 bg-card rounded-lg sm:rounded-xl shadow-card">
+            <div className="text-lg sm:text-2xl md:text-3xl font-bold text-accent">98%</div>
+            <div className="text-xs sm:text-sm text-muted-foreground">Satisfação</div>
           </div>
-          <div className="text-center p-4 bg-card rounded-xl shadow-soft">
-            <div className="text-2xl md:text-3xl font-bold text-accent">5★</div>
-            <div className="text-sm text-muted-foreground">Avaliação</div>
+          <div className="text-center p-2 sm:p-4 bg-card rounded-lg sm:rounded-xl shadow-card">
+            <div className="text-lg sm:text-2xl md:text-3xl font-bold text-accent">5★</div>
+            <div className="text-xs sm:text-sm text-muted-foreground">Avaliação</div>
           </div>
         </div>
       </div>

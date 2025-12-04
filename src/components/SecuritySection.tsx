@@ -41,17 +41,17 @@ const SecuritySection = () => {
   ];
 
   return (
-    <section id="seguranca" className="py-20 md:py-28 bg-background">
+    <section id="seguranca" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-background">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-accent/10 text-accent rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
             Sua Segurança é Prioridade
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 px-2">
             Política de <span className="text-primary">Segurança</span> e <span className="text-accent">Confiança</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
             Entenda como protegemos seus dados e garantimos a segurança de todas as transações.
           </p>
         </div>

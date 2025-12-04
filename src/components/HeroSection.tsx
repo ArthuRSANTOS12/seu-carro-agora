@@ -21,7 +21,7 @@ const HeroSection = () => {
     text: "Parceria Detran",
     link: "https://www.detran.mg.gov.br"
   }];
-  return <section className="relative">
+  return <section className="relative pt-16 md:pt-20">
       {/* Christmas Background Image */}
       <img alt="Promoção de Natal Dancar" className="w-full h-auto block" src="/lovable-uploads/47d19932-a945-4fc9-a503-0d300b0facb0.jpg" />
       
@@ -29,7 +29,7 @@ const HeroSection = () => {
       {/* YouTube-style play button on TV screen */}
       <button 
         onClick={() => setIsOpen(true)}
-        className="absolute z-10 cursor-pointer group"
+        className="absolute z-10 cursor-pointer group hidden sm:flex"
         style={{
           top: '55%',
           left: '59%',
@@ -38,8 +38,8 @@ const HeroSection = () => {
         title="Clique para assistir!"
       >
         {/* YouTube play button */}
-        <div className="bg-red-600 hover:bg-red-700 rounded-xl px-6 py-4 md:px-8 md:py-5 flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-lg">
-          <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-white border-b-[10px] border-b-transparent ml-1 md:border-t-[14px] md:border-l-[22px] md:border-b-[14px]" />
+        <div className="bg-red-600 hover:bg-red-700 rounded-lg sm:rounded-xl px-3 py-2 sm:px-6 sm:py-4 md:px-8 md:py-5 flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-lg">
+          <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-0.5 sm:border-t-[10px] sm:border-l-[16px] sm:border-b-[10px] md:border-t-[14px] md:border-l-[22px] md:border-b-[14px]" />
         </div>
       </button>
       
@@ -72,31 +72,31 @@ const HeroSection = () => {
       )}
 
       {/* Content overlay - positioned at bottom of image */}
-      <div className="absolute bottom-4 md:bottom-8 left-0 right-0">
+      <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 left-0 right-0 px-2 sm:px-0">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
-              <Button variant="hero" size="xl" asChild>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center mb-2 sm:mb-4">
+              <Button variant="hero" size="default" className="text-xs sm:text-sm md:text-base px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3" asChild>
                 <a href="#veiculos">Ver Estoque Disponível</a>
               </Button>
-              <Button variant="hero" size="xl" asChild>
+              <Button variant="hero" size="default" className="text-xs sm:text-sm md:text-base px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3" asChild>
                 <a href="#como-funciona">Como Funciona</a>
               </Button>
             </div>
 
-            {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+            {/* Trust Badges - Hidden on very small screens */}
+            <div className="hidden xs:flex flex-wrap justify-center gap-1.5 sm:gap-2 md:gap-4">
               {badges.map((badge, index) => {
               const BadgeContent = <>
-                    <badge.icon className="w-4 h-4 text-green-700" />
-                    <span className="text-xs md:text-sm font-medium text-green-800">
+                    <badge.icon className="w-3 h-3 sm:w-4 sm:h-4 text-green-700" />
+                    <span className="text-[10px] sm:text-xs md:text-sm font-medium text-green-800">
                       {badge.text}
                     </span>
                   </>;
-              return badge.link ? <a key={index} href={badge.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md hover:bg-white transition-colors">
+              return badge.link ? <a key={index} href={badge.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 sm:py-1.5 border border-green-600/30 shadow-md hover:bg-white transition-colors">
                     {BadgeContent}
-                  </a> : <div key={index} className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md">
+                  </a> : <div key={index} className="flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 sm:py-1.5 border border-green-600/30 shadow-md">
                     {BadgeContent}
                   </div>;
             })}
