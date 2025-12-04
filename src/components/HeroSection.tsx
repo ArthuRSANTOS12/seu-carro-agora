@@ -13,7 +13,7 @@ const HeroSection = () => {
   }, {
     icon: BadgeCheck,
     text: "Integrado ao Gov.br",
-    link: null
+    link: "https://www.gov.br"
   }, {
     icon: Building2,
     text: "Parceria Detran",
