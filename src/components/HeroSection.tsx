@@ -25,23 +25,6 @@ const HeroSection = () => {
       {/* Christmas Background Image */}
       <img alt="Promoção de Natal Dancar" className="w-full h-auto block" src="/lovable-uploads/47d19932-a945-4fc9-a503-0d300b0facb0.jpg" />
       
-      {/* Hidden Easter Egg Button */}
-      {/* YouTube-style play button on TV screen */}
-      <button 
-        onClick={() => setIsOpen(true)}
-        className="absolute z-10 cursor-pointer group hidden sm:flex"
-        style={{
-          top: '55%',
-          left: '59%',
-          transform: 'translate(-50%, -50%)',
-        }}
-        title="Clique para assistir!"
-      >
-        {/* YouTube play button */}
-        <div className="bg-red-600 hover:bg-red-700 rounded-lg sm:rounded-xl px-3 py-2 sm:px-6 sm:py-4 md:px-8 md:py-5 flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-lg">
-          <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-0.5 sm:border-t-[10px] sm:border-l-[16px] sm:border-b-[10px] md:border-t-[14px] md:border-l-[22px] md:border-b-[14px]" />
-        </div>
-      </button>
       
       {/* Custom Video Modal */}
       {isOpen && (
