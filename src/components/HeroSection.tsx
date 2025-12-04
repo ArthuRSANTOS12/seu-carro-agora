@@ -1,7 +1,10 @@
-import { Shield, FileSignature, BadgeCheck, Building2 } from "lucide-react";
+import { Shield, FileSignature, BadgeCheck, Building2, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-christmas-banner-hd.jpeg";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from "react";
+
 const HeroSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const badges = [{
     icon: Shield,
     text: "Segurança Criptografada",
@@ -22,6 +25,31 @@ const HeroSection = () => {
   return <section className="relative">
       {/* Christmas Background Image */}
       <img alt="Promoção de Natal Dancar" className="w-full h-auto block" src="/lovable-uploads/47d19932-a945-4fc9-a503-0d300b0facb0.jpg" />
+      
+      {/* Hidden Easter Egg Button */}
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <DialogTrigger asChild>
+          <button 
+            className="absolute top-4 right-4 md:top-8 md:right-8 bg-white/10 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 md:p-3 border border-white/20 shadow-lg transition-all duration-300 hover:scale-110 group opacity-40 hover:opacity-100"
+            title="Surpresa!"
+          >
+            <Gift className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-yellow-300 transition-colors" />
+            <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[8px] md:text-[10px] text-white/60 font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+              PARTICIPAR
+            </span>
+          </button>
+        </DialogTrigger>
+        <DialogContent className="max-w-4xl p-0 bg-black border-none overflow-hidden">
+          <video 
+            controls 
+            autoPlay 
+            className="w-full h-auto max-h-[80vh] object-contain"
+            src="/videos/sorteio-surpresa.mp4"
+          >
+            Seu navegador não suporta vídeos.
+          </video>
+        </DialogContent>
+      </Dialog>
 
       {/* Content overlay - positioned at bottom of image */}
       <div className="absolute bottom-4 md:bottom-8 left-0 right-0">
