@@ -2,6 +2,7 @@ import { Check, Calendar, Fuel, Gauge, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import sienaImage from "@/assets/vehicle-siena-2016.jpeg";
 import prismaImage from "@/assets/vehicle-prisma-2009.jpeg";
+import stradaImage from "@/assets/vehicle-strada-2015.jpeg";
 
 interface Vehicle {
   id: number;
@@ -40,6 +41,18 @@ const vehicles: Vehicle[] = [
     image: prismaImage,
     badge: "Oportunidade",
     tags: ["4 Portas", "Direção Hidráulica"],
+  },
+  {
+    id: 3,
+    name: "FIAT STRADA",
+    model: "Working 1.4 Flex",
+    year: "2015",
+    fuel: "Flex",
+    km: "95.000 km",
+    price: "R$ 49.900",
+    image: stradaImage,
+    badge: "Trabalho",
+    tags: ["Cabine Simples", "Direção Hidráulica"],
   },
 ];
 
