@@ -25,8 +25,8 @@ const HeroSection = () => {
               <Button variant="hero" size="xl" asChild>
                 <a href="#estoque">Ver Estoque Disponível</a>
               </Button>
-              <Button variant="hero-outline" size="xl" asChild>
-                <a href="#como-funciona" className="text-emerald-500">Como Funciona</a>
+              <Button variant="hero" size="xl" asChild>
+                <a href="#como-funciona">Como Funciona</a>
               </Button>
             </div>
 

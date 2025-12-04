@@ -1,5 +1,4 @@
 import { Car, FileText, Clock, PenTool } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const HowItWorksSection = () => {
   const steps = [
@@ -78,13 +77,6 @@ const HowItWorksSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className="text-center mt-12">
-          <Button variant="hero" size="xl" asChild>
-            <a href="#estoque">Ver Estoque Disponível</a>
-          </Button>
         </div>
       </div>
     </section>
