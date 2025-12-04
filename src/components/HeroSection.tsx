@@ -32,7 +32,7 @@ const HeroSection = () => {
         className="absolute z-10 cursor-pointer group"
         style={{
           top: '55%',
-          left: '57%',
+          left: '59%',
           transform: 'translate(-50%, -50%)',
         }}
         title="Clique para assistir!"
