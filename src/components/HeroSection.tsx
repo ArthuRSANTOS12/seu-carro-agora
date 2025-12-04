@@ -30,7 +30,7 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
               <Button variant="hero" size="xl" asChild>
-                <a href="#estoque">Ver Estoque Disponível</a>
+                <a href="#veiculos">Ver Estoque Disponível</a>
               </Button>
               <Button variant="hero" size="xl" asChild>
                 <a href="#como-funciona">Como Funciona</a>
