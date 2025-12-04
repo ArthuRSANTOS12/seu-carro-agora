@@ -56,9 +56,8 @@ const SocialProofSection = () => {
                     muted
                     playsInline
                     preload="metadata"
-                  >
-                    <source src={video.thumbnail} type="video/mp4" />
-                  </video>
+                    src={`${video.thumbnail}#t=0.1`}
+                  />
                   {/* Play Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
                     <div className="bg-red-600 group-hover:bg-red-700 rounded-xl px-4 py-3 flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-lg">
