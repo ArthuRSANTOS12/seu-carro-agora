@@ -73,8 +73,8 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Trust Badges - Hidden on very small screens */}
-            <div className="hidden sm:flex flex-wrap justify-center gap-1.5 sm:gap-2 md:gap-4">
+            {/* Trust Badges */}
+            <div className="flex flex-wrap justify-center gap-1 xs:gap-1.5 sm:gap-2 md:gap-4">
               {badges.map((badge, index) => {
               const BadgeContent = <>
                     <badge.icon className="w-3 h-3 sm:w-4 sm:h-4 text-green-700" />
