@@ -26,15 +26,23 @@ const HeroSection = () => {
       <img alt="Promoção de Natal Dancar" className="w-full h-auto block" src="/lovable-uploads/47d19932-a945-4fc9-a503-0d300b0facb0.jpg" />
       
       {/* Hidden Easter Egg Button */}
+      {/* Hidden Easter Egg Button - positioned on TV */}
       <button 
         onClick={() => setIsOpen(true)}
-        className="absolute top-4 right-4 md:top-8 md:right-8 z-10 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-2 md:p-3 border border-white/30 shadow-lg transition-all duration-300 hover:scale-110 group"
+        className="absolute z-10 hover:scale-105 transition-all duration-300 group"
+        style={{
+          top: '42%',
+          left: '54%',
+          transform: 'perspective(500px) rotateY(-8deg) rotateX(2deg)',
+        }}
         title="Surpresa!"
       >
-        <Gift className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-yellow-300 transition-colors" />
-        <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[8px] md:text-[10px] text-white font-medium whitespace-nowrap">
-          PARTICIPAR
-        </span>
+        <div className="bg-black/60 hover:bg-black/80 backdrop-blur-sm rounded-lg px-3 py-2 md:px-4 md:py-3 border border-white/20 shadow-xl flex flex-col items-center gap-1">
+          <Gift className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 group-hover:text-yellow-300 transition-colors" />
+          <span className="text-[8px] md:text-[10px] text-white font-bold tracking-wide">
+            PARTICIPAR
+          </span>
+        </div>
       </button>
       
       {/* Custom Video Modal */}
