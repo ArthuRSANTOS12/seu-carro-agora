@@ -74,17 +74,17 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center gap-1 xs:gap-1.5 sm:gap-2 md:gap-4">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4">
               {badges.map((badge, index) => {
               const BadgeContent = <>
-                    <badge.icon className="w-3 h-3 sm:w-4 sm:h-4 text-green-700" />
-                    <span className="text-[10px] sm:text-xs md:text-sm font-medium text-green-800">
+                    <badge.icon className="w-4 h-4 text-green-700" />
+                    <span className="text-xs md:text-sm font-medium text-green-800">
                       {badge.text}
                     </span>
                   </>;
-              return badge.link ? <a key={index} href={badge.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 sm:py-1.5 border border-green-600/30 shadow-md hover:bg-white transition-colors">
+              return badge.link ? <a key={index} href={badge.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md hover:bg-white transition-colors">
                     {BadgeContent}
-                  </a> : <div key={index} className="flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 sm:py-1.5 border border-green-600/30 shadow-md">
+                  </a> : <div key={index} className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md">
                     {BadgeContent}
                   </div>;
             })}
