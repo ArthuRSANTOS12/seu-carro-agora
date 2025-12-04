@@ -15,7 +15,9 @@ const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Christmas Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroBg})`
+      backgroundImage: `url(${heroBg})`,
+      backgroundSize: 'cover',
+      backgroundColor: '#1a5a2a'
     }} />
       
       {/* Dark Overlay for readability */}
