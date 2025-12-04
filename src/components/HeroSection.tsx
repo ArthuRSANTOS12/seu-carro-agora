@@ -12,20 +12,20 @@ const HeroSection = () => {
     icon: BadgeCheck,
     text: "Integrado ao Gov.br"
   }];
-  return <section className="relative flex flex-col overflow-hidden" style={{ backgroundColor: '#1a5a2a' }}>
+  return <section className="relative">
       {/* Christmas Background Image */}
       <img 
         src={heroBg} 
         alt="Promoção de Natal Dancar" 
-        className="w-full h-auto object-contain"
+        className="w-full h-auto block"
       />
 
-      {/* Content overlay */}
-      <div className="absolute bottom-0 left-0 right-0 pb-8 pt-16 bg-gradient-to-t from-[#1a5a2a] via-[#1a5a2a]/80 to-transparent">
+      {/* Content overlay - positioned at bottom of image */}
+      <div className="absolute bottom-4 md:bottom-8 left-0 right-0">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
               <Button variant="hero" size="xl" asChild>
                 <a href="#estoque">Ver Estoque Disponível</a>
               </Button>
@@ -35,10 +35,10 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              {badges.map((badge, index) => <div key={index} className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-green-600/30 shadow-md">
-                  <badge.icon className="w-5 h-5 text-green-700" />
-                  <span className="text-sm font-medium text-green-800">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+              {badges.map((badge, index) => <div key={index} className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md">
+                  <badge.icon className="w-4 h-4 text-green-700" />
+                  <span className="text-xs md:text-sm font-medium text-green-800">
                     {badge.text}
                   </span>
                 </div>)}
