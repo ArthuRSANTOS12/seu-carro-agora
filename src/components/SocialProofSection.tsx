@@ -4,10 +4,10 @@ import { useState } from "react";
 const videos = [
   {
     id: 1,
-    src: "/videos/entrega-corolla-2025.mp4",
+    src: "/videos/novo-depoimento.mp4",
     title: "COROLLA APROVADO NO APP DAN CAR",
     description: "Cliente contemplado pelo sorteio mensal DAN CAR",
-    thumbnail: "/videos/entrega-corolla-2025.mp4",
+    thumbnail: "/videos/novo-depoimento.mp4",
   },
   {
     id: 2,
