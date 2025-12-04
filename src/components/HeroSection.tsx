@@ -1,6 +1,5 @@
-import { Shield, FileSignature, BadgeCheck, Building2, Gift } from "lucide-react";
+import { Shield, FileSignature, BadgeCheck, Building2, Gift, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useState } from "react";
 
 const HeroSection = () => {
@@ -38,19 +37,33 @@ const HeroSection = () => {
         </span>
       </button>
       
-      {/* Video Modal */}
-      <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-4xl p-0 bg-black border-none overflow-hidden">
-          <video 
-            controls 
-            autoPlay 
-            className="w-full h-auto max-h-[80vh] object-contain"
-            src="/videos/sorteio-surpresa.mp4"
+      {/* Custom Video Modal */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+          onClick={() => setIsOpen(false)}
+        >
+          <div 
+            className="relative max-w-4xl w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
           >
-            Seu navegador não suporta vídeos.
-          </video>
-        </DialogContent>
-      </Dialog>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <video 
+              controls 
+              autoPlay 
+              className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+              src="/videos/sorteio-surpresa.mp4"
+            >
+              Seu navegador não suporta vídeos.
+            </video>
+          </div>
+        </div>
+      )}
 
       {/* Content overlay - positioned at bottom of image */}
       <div className="absolute bottom-4 md:bottom-8 left-0 right-0">
