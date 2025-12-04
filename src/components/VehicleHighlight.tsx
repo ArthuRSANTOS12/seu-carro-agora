@@ -1,5 +1,6 @@
 import { Check, Calendar, Fuel, Gauge, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import vehicleImage from "@/assets/vehicle-saveiro.jpeg";
 
 const VehicleHighlight = () => {
   const features = [
@@ -14,10 +15,10 @@ const VehicleHighlight = () => {
     "IPVA Pago",
   ];
 
-  const whatsappLink = "https://wa.me/5500000000000?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Fiat%20Palio%202010.%20Gostaria%20de%20simular%20a%20compra.";
+  const whatsappLink = "https://wa.me/553891307991?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Fiat%20Palio%202010.%20Gostaria%20de%20simular%20a%20compra.";
 
   return (
-    <section id="estoque" className="py-20 md:py-28 bg-muted/50">
+    <section id="veiculos" className="py-20 md:py-28 bg-muted/50">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -37,17 +38,12 @@ const VehicleHighlight = () => {
           <div className="bg-card rounded-3xl shadow-card-hover overflow-hidden border border-border">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Image Section */}
-              <div className="relative h-64 md:h-auto bg-gradient-to-br from-muted to-secondary flex items-center justify-center">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <svg viewBox="0 0 24 24" className="w-20 h-20 text-primary" fill="currentColor">
-                        <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
-                      </svg>
-                    </div>
-                    <p className="text-muted-foreground text-sm">Imagem ilustrativa</p>
-                  </div>
-                </div>
+              <div className="relative h-64 md:h-full min-h-[300px]">
+                <img 
+                  src={vehicleImage} 
+                  alt="Volkswagen Saveiro branca" 
+                  className="w-full h-full object-cover"
+                />
                 {/* Badge */}
                 <div className="absolute top-4 left-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold">
                   Oportunidade
