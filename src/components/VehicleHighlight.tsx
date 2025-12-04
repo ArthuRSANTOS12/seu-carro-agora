@@ -71,11 +71,11 @@ const vehicles: Vehicle[] = [
   {
     id: 5,
     name: "HYUNDAI HB20",
-    model: "1.0 Flex",
+    model: "Comfort 1.0 (Flex)",
     year: "2022",
     fuel: "Flex",
     km: "45.000 km",
-    price: "R$ 65.000",
+    price: "R$ 60.000",
     image: hb20Image,
     badge: "Destaque",
     tags: ["Completo", "Baixa KM"],
