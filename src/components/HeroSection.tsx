@@ -1,4 +1,4 @@
-import { Shield, FileSignature, BadgeCheck, Building2, Gift, X } from "lucide-react";
+import { Shield, FileSignature, BadgeCheck, Building2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -26,20 +26,29 @@ const HeroSection = () => {
       <img alt="Promoção de Natal Dancar" className="w-full h-auto block" src="/lovable-uploads/47d19932-a945-4fc9-a503-0d300b0facb0.jpg" />
       
       {/* Hidden Easter Egg Button */}
-      {/* Hidden Easter Egg Button - positioned on TV */}
+      {/* Hidden Easter Egg Button - positioned on TV screen */}
       <button 
         onClick={() => setIsOpen(true)}
-        className="absolute z-10 hover:scale-105 transition-all duration-300 group"
+        className="absolute z-10 hover:brightness-110 transition-all duration-300 group cursor-pointer"
         style={{
-          top: '42%',
-          left: '54%',
-          transform: 'perspective(500px) rotateY(-8deg) rotateX(2deg)',
+          top: '52%',
+          left: '54.5%',
+          width: '5.5%',
+          aspectRatio: '16/10',
+          transform: 'perspective(800px) rotateY(-2deg)',
         }}
-        title="Surpresa!"
+        title="Clique para assistir!"
       >
-        <div className="bg-black/60 hover:bg-black/80 backdrop-blur-sm rounded-lg px-3 py-2 md:px-4 md:py-3 border border-white/20 shadow-xl flex flex-col items-center gap-1">
-          <Gift className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 group-hover:text-yellow-300 transition-colors" />
-          <span className="text-[8px] md:text-[10px] text-white font-bold tracking-wide">
+        <div className="w-full h-full bg-gradient-to-br from-red-600 via-red-700 to-red-900 rounded-sm flex flex-col items-center justify-center gap-1 shadow-2xl border border-red-500/50 overflow-hidden relative">
+          {/* Shine effect */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent" />
+          
+          {/* Play icon */}
+          <div className="w-6 h-6 md:w-8 md:h-8 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <div className="w-0 h-0 border-t-[5px] border-t-transparent border-l-[8px] border-l-red-600 border-b-[5px] border-b-transparent ml-0.5 md:border-t-[6px] md:border-l-[10px] md:border-b-[6px]" />
+          </div>
+          
+          <span className="text-[6px] md:text-[9px] text-white font-bold tracking-wider drop-shadow-lg">
             PARTICIPAR
           </span>
         </div>
