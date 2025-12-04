@@ -25,7 +25,7 @@ const vehicles: Vehicle[] = [
     model: "EL 1.0 Flex",
     year: "2016",
     fuel: "Flex",
-    km: "85.000 km",
+    km: "185.000 km",
     price: "R$ 18.900",
     image: sienaImage,
     badge: "Econômico",
