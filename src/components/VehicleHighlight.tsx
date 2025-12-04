@@ -183,7 +183,7 @@ const VehicleCard = ({ vehicle }: { vehicle: Vehicle }) => {
         <Button variant="accent" size="sm" className="w-full" asChild>
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
             <MessageCircle className="w-4 h-4" />
-            Tenho Interesse
+            Dar Entrada + Promissória
           </a>
         </Button>
       </div>
