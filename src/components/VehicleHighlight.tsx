@@ -124,7 +124,7 @@ const vehicles: Vehicle[] = [
     id: 9,
     name: "VOLKSWAGEN GOL",
     model: "G5 1.0 Trend",
-    year: "2012",
+    year: "2020",
     fuel: "Flex",
     km: "130.000 km",
     price: "R$ 25.000",
