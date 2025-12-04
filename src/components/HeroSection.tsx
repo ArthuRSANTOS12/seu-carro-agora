@@ -73,8 +73,8 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Trust Badges - Single row */}
-            <div className="flex flex-row flex-nowrap justify-center gap-1 sm:gap-2 md:gap-4">
+            {/* Trust Badges - Single row with scroll on mobile */}
+            <div className="flex flex-row flex-nowrap justify-start sm:justify-center gap-1 sm:gap-2 md:gap-4 overflow-x-auto scrollbar-hide pb-1 -mx-1 px-1">
               {badges.map((badge, index) => {
               const BadgeContent = <>
                     <badge.icon className="w-2.5 h-2.5 sm:w-4 sm:h-4 text-green-700 flex-shrink-0" />
