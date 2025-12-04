@@ -6,6 +6,7 @@ import stradaImage from "@/assets/vehicle-strada-2015.jpeg";
 import milleImage from "@/assets/vehicle-mille-economy.jpeg";
 import hb20Image from "@/assets/vehicle-hb20-2022.jpg";
 import corollaImage from "@/assets/vehicle-corolla-2016.jpg";
+import mobiImage from "@/assets/vehicle-mobi-2018.jpg";
 
 interface Vehicle {
   id: number;
@@ -92,6 +93,18 @@ const vehicles: Vehicle[] = [
     image: corollaImage,
     badge: "Premium",
     tags: ["Automático", "Completo"],
+  },
+  {
+    id: 7,
+    name: "FIAT MOBI",
+    model: "Drive 1.0",
+    year: "2018",
+    fuel: "Flex",
+    km: "80.000 km",
+    price: "R$ 42.000",
+    image: mobiImage,
+    badge: "Completo",
+    tags: ["Multimídia", "Câmera de Ré"],
   },
 ];
 
