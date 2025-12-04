@@ -1,6 +1,6 @@
 import { Shield, FileSignature, BadgeCheck, ChevronDown, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-christmas-bg.jpg";
+import heroBg from "@/assets/hero-christmas-banner.jpeg";
 const HeroSection = () => {
   const badges = [{
     icon: Shield,
