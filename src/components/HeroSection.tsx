@@ -26,7 +26,7 @@ const HeroSection = () => {
     {/* Christmas Background Image */}
       <img 
         alt="Promoção de Natal Dancar" 
-        className="w-full h-[50vh] sm:h-[60vh] md:h-auto object-cover object-top sm:object-center" 
+        className="w-full h-auto" 
         src={heroBanner} 
       />
       
