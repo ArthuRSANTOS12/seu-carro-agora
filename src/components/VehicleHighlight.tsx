@@ -7,6 +7,7 @@ import milleImage from "@/assets/vehicle-mille-economy.jpeg";
 import hb20Image from "@/assets/vehicle-hb20-2022.jpg";
 import corollaImage from "@/assets/vehicle-corolla-2016.jpg";
 import mobiImage from "@/assets/vehicle-mobi-2018.jpg";
+import toroImage from "@/assets/vehicle-toro-2018.jpg";
 
 interface Vehicle {
   id: number;
@@ -105,6 +106,18 @@ const vehicles: Vehicle[] = [
     image: mobiImage,
     badge: "Completo",
     tags: ["Multimídia", "Câmera de Ré"],
+  },
+  {
+    id: 8,
+    name: "FIAT TORO",
+    model: "Freedom 1.8 Flex Aut.",
+    year: "2018/2019",
+    fuel: "Flex",
+    km: "83.000 km",
+    price: "R$ 95.000",
+    image: toroImage,
+    badge: "Destaque",
+    tags: ["Automático", "Cabine Dupla"],
   },
 ];
 
