@@ -31,15 +31,15 @@ const HeroSection = () => {
         onClick={() => setIsOpen(true)}
         className="absolute z-10 cursor-pointer group"
         style={{
-          top: '57%',
-          left: '55%',
-          transform: 'translate(-50%, -50%)',
+          top: '54%',
+          left: '56%',
+          transform: 'translate(-50%, -50%) rotateY(-8deg) rotateX(2deg)',
         }}
         title="Clique para assistir!"
       >
         {/* YouTube play button */}
-        <div className="bg-red-600 hover:bg-red-700 rounded-lg px-3 py-2 md:px-4 md:py-2.5 flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-lg">
-          <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-0.5 md:border-t-[8px] md:border-l-[12px] md:border-b-[8px]" />
+        <div className="bg-red-600 hover:bg-red-700 rounded-xl px-6 py-4 md:px-8 md:py-5 flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-lg">
+          <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-white border-b-[10px] border-b-transparent ml-1 md:border-t-[14px] md:border-l-[22px] md:border-b-[14px]" />
         </div>
       </button>
       
