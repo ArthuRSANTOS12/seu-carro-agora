@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import sienaImage from "@/assets/vehicle-siena-2016.jpeg";
 import prismaImage from "@/assets/vehicle-prisma-2009.jpeg";
 import stradaImage from "@/assets/vehicle-strada-2015.jpeg";
+import milleImage from "@/assets/vehicle-mille-economy.jpeg";
 
 interface Vehicle {
   id: number;
@@ -53,6 +54,18 @@ const vehicles: Vehicle[] = [
     image: stradaImage,
     badge: "Trabalho",
     tags: ["Cabine Simples", "Direção Hidráulica"],
+  },
+  {
+    id: 4,
+    name: "FIAT MILLE",
+    model: "Economy 1.0 Flex",
+    year: "2012",
+    fuel: "Flex",
+    km: "110.000 km",
+    price: "R$ 19.900",
+    image: milleImage,
+    badge: "Econômico",
+    tags: ["2 Portas", "Baixo Consumo"],
   },
 ];
 
