@@ -12,27 +12,14 @@ const HeroSection = () => {
     icon: BadgeCheck,
     text: "Integrado ao Gov.br"
   }];
-  return <section className="relative min-h-screen flex items-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center overflow-hidden" style={{ backgroundColor: '#1a5a2a' }}>
       {/* Christmas Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroBg})`,
-      backgroundSize: 'cover',
-      backgroundColor: '#1a5a2a'
-    }} />
-      
-      {/* Dark Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70" />
-      
-      {/* Festive Sparkles */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-500 rounded-full blur-3xl animate-pulse" style={{
-        animationDelay: "1s"
+      <div className="absolute inset-0" style={{
+        backgroundImage: `url(${heroBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'no-repeat'
       }} />
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-accent rounded-full blur-3xl animate-pulse" style={{
-        animationDelay: "0.5s"
-      }} />
-      </div>
 
       <div className="container-custom relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
