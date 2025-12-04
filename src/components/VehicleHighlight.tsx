@@ -8,6 +8,7 @@ import hb20Image from "@/assets/vehicle-hb20-2022.jpg";
 import corollaImage from "@/assets/vehicle-corolla-2016.jpg";
 import mobiImage from "@/assets/vehicle-mobi-2018.jpg";
 import toroImage from "@/assets/vehicle-toro-2018.jpg";
+import golImage from "@/assets/vehicle-gol-g5.jpg";
 
 interface Vehicle {
   id: number;
@@ -118,6 +119,18 @@ const vehicles: Vehicle[] = [
     image: toroImage,
     badge: "Destaque",
     tags: ["Automático", "Cabine Dupla"],
+  },
+  {
+    id: 9,
+    name: "VOLKSWAGEN GOL",
+    model: "G5 1.0 Trend",
+    year: "2012",
+    fuel: "Flex",
+    km: "130.000 km",
+    price: "R$ 25.000",
+    image: golImage,
+    badge: "Popular",
+    tags: ["4 Portas", "Econômico"],
   },
 ];
 
