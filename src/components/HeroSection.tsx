@@ -1,6 +1,6 @@
 import { Shield, FileSignature, BadgeCheck, Building2, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useState } from "react";
 
 const HeroSection = () => {
@@ -27,18 +27,19 @@ const HeroSection = () => {
       <img alt="Promoção de Natal Dancar" className="w-full h-auto block" src="/lovable-uploads/47d19932-a945-4fc9-a503-0d300b0facb0.jpg" />
       
       {/* Hidden Easter Egg Button */}
+      <button 
+        onClick={() => setIsOpen(true)}
+        className="absolute top-4 right-4 md:top-8 md:right-8 z-10 bg-white/10 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 md:p-3 border border-white/20 shadow-lg transition-all duration-300 hover:scale-110 group opacity-40 hover:opacity-100"
+        title="Surpresa!"
+      >
+        <Gift className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-yellow-300 transition-colors" />
+        <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[8px] md:text-[10px] text-white/60 font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+          PARTICIPAR
+        </span>
+      </button>
+      
+      {/* Video Modal */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogTrigger asChild>
-          <button 
-            className="absolute top-4 right-4 md:top-8 md:right-8 bg-white/10 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 md:p-3 border border-white/20 shadow-lg transition-all duration-300 hover:scale-110 group opacity-40 hover:opacity-100"
-            title="Surpresa!"
-          >
-            <Gift className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-yellow-300 transition-colors" />
-            <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[8px] md:text-[10px] text-white/60 font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-              PARTICIPAR
-            </span>
-          </button>
-        </DialogTrigger>
         <DialogContent className="max-w-4xl p-0 bg-black border-none overflow-hidden">
           <video 
             controls 
