@@ -1,4 +1,4 @@
-import { Shield, FileSignature, BadgeCheck } from "lucide-react";
+import { Shield, FileSignature, BadgeCheck, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-christmas-banner-hd.jpeg";
 const HeroSection = () => {
@@ -11,6 +11,9 @@ const HeroSection = () => {
   }, {
     icon: BadgeCheck,
     text: "Integrado ao Gov.br"
+  }, {
+    icon: Building2,
+    text: "Parceria Detran"
   }];
   return <section className="relative">
       {/* Christmas Background Image */}
