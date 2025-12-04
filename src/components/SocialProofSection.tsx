@@ -12,7 +12,7 @@ const videos = [
   {
     id: 2,
     src: "/videos/cliente-depoimento.mp4",
-    title: "Depoimento de Cliente",
+    title: "DAN CAR RENOVANDO SONHOS",
     description: "Satisfação garantida com a Dan Car",
     thumbnail: "/videos/cliente-depoimento.mp4",
   },
