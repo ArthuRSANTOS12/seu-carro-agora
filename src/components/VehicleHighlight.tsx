@@ -86,6 +86,7 @@ const VehicleCard = ({ vehicle }: { vehicle: Vehicle }) => {
           src={vehicle.image}
           alt={vehicle.name}
           className="w-full h-full object-cover"
+          style={vehicle.name === "FIAT MILLE" ? { objectPosition: "center 60%" } : undefined}
         />
         <div className="absolute top-3 left-3 bg-accent text-accent-foreground px-2.5 py-1 rounded-full text-xs font-semibold">
           {vehicle.badge}
