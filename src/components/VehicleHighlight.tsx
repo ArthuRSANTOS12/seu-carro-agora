@@ -68,11 +68,11 @@ const VehicleCard = ({ vehicle }: { vehicle: Vehicle }) => {
   return (
     <div className="bg-card rounded-2xl shadow-card-hover overflow-hidden border border-border transition-transform hover:scale-[1.02] duration-300">
       {/* Image Section */}
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-[16/10] overflow-hidden bg-muted">
         <img
           src={vehicle.image}
           alt={vehicle.name}
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-contain"
         />
         <div className="absolute top-3 left-3 bg-accent text-accent-foreground px-2.5 py-1 rounded-full text-xs font-semibold">
           {vehicle.badge}
