@@ -55,8 +55,15 @@ const RaffleSection = () => {
     setIsSubmitting(false);
   };
   return <section className="relative py-6 sm:py-8 md:py-10 overflow-hidden">
-      {/* Background com gradiente festivo */}
-      <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-orange-500 to-red-600" />
+      {/* Background com imagem de carros */}
+      <div className="absolute inset-0">
+        <img 
+          src="/lovable-uploads/47d19932-a945-4fc9-a503-0d300b0facb0.jpg" 
+          alt="Carros do sorteio" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/80 via-orange-500/70 to-red-600/80" />
+      </div>
 
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto">
