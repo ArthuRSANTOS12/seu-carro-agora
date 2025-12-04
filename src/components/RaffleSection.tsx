@@ -99,6 +99,15 @@ const RaffleSection = () => {
               <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 inline text-amber-500 mr-1" />
               Participação 100% gratuita • +247 pessoas já participando!
             </p>
+
+            {/* Imagem de carros */}
+            <div className="mt-4 sm:mt-6 flex justify-center gap-2 sm:gap-4">
+              <img 
+                src="/lovable-uploads/47d19932-a945-4fc9-a503-0d300b0facb0.jpg" 
+                alt="Carros do sorteio" 
+                className="w-full max-w-md rounded-lg shadow-md object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
