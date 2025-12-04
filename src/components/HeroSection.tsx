@@ -1,6 +1,7 @@
 import { Shield, FileSignature, BadgeCheck, Building2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import heroBanner from "@/assets/hero-banner-4k.jpg";
 
 const HeroSection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ const HeroSection = () => {
       <img 
         alt="Promoção de Natal Dancar" 
         className="w-full h-[50vh] sm:h-[60vh] md:h-auto object-cover object-top sm:object-center" 
-        src="/lovable-uploads/47d19932-a945-4fc9-a503-0d300b0facb0.jpg" 
+        src={heroBanner} 
       />
       
       
