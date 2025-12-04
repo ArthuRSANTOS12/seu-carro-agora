@@ -24,29 +24,29 @@ const Footer = () => {
     label: "LGPD"
   }];
   return <footer id="contato" className="bg-primary text-primary-foreground">
-      <div className="container-custom py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+      <div className="container-custom py-8 sm:py-10 md:py-12 lg:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
           {/* Brand */}
-          <div className="lg:col-span-1">
-            <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center">
-                <Car className="w-6 h-6 text-accent" />
+          <div className="col-span-2 md:col-span-2 lg:col-span-1">
+            <a href="#" className="flex items-center gap-2 mb-3 sm:mb-4">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-primary-foreground/10 flex items-center justify-center">
+                <Car className="w-4 h-4 sm:w-6 sm:h-6 text-accent" />
               </div>
-              <span className="text-xl font-bold">
+              <span className="text-lg sm:text-xl font-bold">
                 Garagem <span className="text-accent">Dan Car</span>
               </span>
             </a>
-            <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
+            <p className="text-primary-foreground/70 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
               Sua revenda de veículos com notas no app próprio. Sem banco, sem burocracia, com toda segurança.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Links Rápidos</h4>
-            <ul className="space-y-2">
+            <h4 className="font-semibold text-sm sm:text-lg mb-3 sm:mb-4">Links Rápidos</h4>
+            <ul className="space-y-1.5 sm:space-y-2">
               {quickLinks.map(link => <li key={link.href}>
-                  <a href={link.href} className="text-primary-foreground/70 hover:text-accent transition-colors text-sm">
+                  <a href={link.href} className="text-primary-foreground/70 hover:text-accent transition-colors text-xs sm:text-sm">
                     {link.label}
                   </a>
                 </li>)}
@@ -55,10 +55,10 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Legal</h4>
-            <ul className="space-y-2">
+            <h4 className="font-semibold text-sm sm:text-lg mb-3 sm:mb-4">Legal</h4>
+            <ul className="space-y-1.5 sm:space-y-2">
               {legalLinks.map(link => <li key={link.label}>
-                  <a href={link.href} className="text-primary-foreground/70 hover:text-accent transition-colors text-sm">
+                  <a href={link.href} className="text-primary-foreground/70 hover:text-accent transition-colors text-xs sm:text-sm">
                     {link.label}
                   </a>
                 </li>)}
@@ -66,21 +66,21 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Contato</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-sm">
-                <Phone className="w-4 h-4 text-accent" />
+          <div className="col-span-2 md:col-span-1">
+            <h4 className="font-semibold text-sm sm:text-lg mb-3 sm:mb-4">Contato</h4>
+            <ul className="space-y-2 sm:space-y-3">
+              <li className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm">
+                <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-accent" />
                 <span className="text-primary-foreground/70">+55 38 9130-7991</span>
               </li>
-              <li className="flex items-center gap-3 text-sm">
-                <Mail className="w-4 h-4 text-accent" />
-                <span className="text-primary-foreground/70">contato@garagedancar.com</span>
+              <li className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm">
+                <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-accent" />
+                <span className="text-primary-foreground/70 break-all">contato@garagedancar.com</span>
               </li>
-              <li className="flex items-start gap-3 text-sm">
-                <MapPin className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+              <li className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm">
+                <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-accent flex-shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/70">
-                                Rua Joviniano Ramos, 233 -  CEP 39400-347.<br />
+                  Rua Joviniano Ramos, 233 - CEP 39400-347.<br />
                   Bairro São José, Montes Claros - MG 
                 </span>
               </li>
@@ -89,11 +89,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-primary-foreground/60 text-sm text-center md:text-left">
+        <div className="border-t border-primary-foreground/10 mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+          <p className="text-primary-foreground/60 text-xs sm:text-sm text-center md:text-left">
             © {new Date().getFullYear()} Garagem Dan Car. Todos os direitos reservados.
           </p>
-          <p className="text-primary-foreground/40 text-xs">
+          <p className="text-primary-foreground/40 text-[10px] sm:text-xs">
             Desenvolvido com segurança e transparência
           </p>
         </div>
