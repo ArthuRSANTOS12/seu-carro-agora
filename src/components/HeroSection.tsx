@@ -31,8 +31,8 @@ const HeroSection = () => {
         onClick={() => setIsOpen(true)}
         className="absolute z-10 cursor-pointer group"
         style={{
-          top: '56%',
-          left: '58%',
+          top: '57%',
+          left: '55%',
           transform: 'translate(-50%, -50%)',
         }}
         title="Clique para assistir!"
