@@ -1,5 +1,6 @@
-import { Shield, FileSignature, BadgeCheck, ChevronDown } from "lucide-react";
+import { Shield, FileSignature, BadgeCheck, ChevronDown, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroBg from "@/assets/hero-christmas-bg.jpg";
 
 const HeroSection = () => {
   const badges = [
@@ -9,34 +10,43 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-foreground rounded-full blur-3xl" />
-      </div>
-
-      {/* Grid Pattern Overlay */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Christmas Background Image */}
       <div 
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
       />
+      
+      {/* Dark Overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70" />
+      
+      {/* Festive Sparkles */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-accent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "0.5s" }} />
+      </div>
 
       <div className="container-custom relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Christmas Promo Badge */}
+          <div className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-2 rounded-full mb-6 opacity-0 animate-fade-in-up shadow-lg" style={{ animationDelay: "0s" }}>
+            <Gift className="w-5 h-5" />
+            <span className="font-semibold">🎄 Promoção de Natal - Ganhe uma TV!</span>
+          </div>
+          
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Seu Carro Novo{" "}
-            <span className="text-accent">Sem Banco</span> e{" "}
-            <span className="text-accent">Sem Burocracia</span>
+            Compre Seu Carro e{" "}
+            <span className="text-yellow-400">Ganhe uma TV!</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            Entrada + Parcelas em Notas Promissórias Digitais.{" "}
-            <strong className="text-accent">Análise em 20 minutos.</strong>
+          <p className="text-lg md:text-xl text-primary-foreground/80 mb-4 max-w-2xl mx-auto opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            Parcelamos sua entrada em até <strong className="text-yellow-400">12x no boleto!</strong>
+          </p>
+          <p className="text-base md:text-lg text-primary-foreground/70 mb-8 max-w-2xl mx-auto opacity-0 animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
+            Entrada + Parcelas em Notas Promissórias Digitais. <strong className="text-accent">Análise em 20 minutos.</strong>
           </p>
 
           {/* CTA Buttons */}
