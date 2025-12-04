@@ -26,7 +26,7 @@ const vehicles: Vehicle[] = [
     year: "2016",
     fuel: "Flex",
     km: "85.000 km",
-    price: "R$ 38.900",
+    price: "R$ 18.900",
     image: sienaImage,
     badge: "Econômico",
     tags: ["Revisado", "Baixo Custo"],
