@@ -64,27 +64,27 @@ const HeroSection = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             {/* CTA Buttons */}
-            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 justify-center mb-2 sm:mb-4">
-              <Button variant="hero" size="default" className="text-[11px] xs:text-xs sm:text-sm md:text-base px-2 xs:px-3 sm:px-4 md:px-6 py-1.5 xs:py-2 sm:py-2.5 md:py-3" asChild>
+            <div className="flex flex-row gap-2 sm:gap-3 justify-center mb-2 sm:mb-4">
+              <Button variant="hero" size="default" className="text-[10px] sm:text-sm md:text-base px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 whitespace-nowrap" asChild>
                 <a href="#veiculos">Ver Estoque Disponível</a>
               </Button>
-              <Button variant="hero" size="default" className="text-[11px] xs:text-xs sm:text-sm md:text-base px-2 xs:px-3 sm:px-4 md:px-6 py-1.5 xs:py-2 sm:py-2.5 md:py-3" asChild>
+              <Button variant="hero" size="default" className="text-[10px] sm:text-sm md:text-base px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 whitespace-nowrap" asChild>
                 <a href="#como-funciona">Como Funciona</a>
               </Button>
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+            <div className="flex flex-nowrap justify-center gap-1.5 sm:gap-2 md:gap-4 overflow-x-auto">
               {badges.map((badge, index) => {
               const BadgeContent = <>
-                    <badge.icon className="w-4 h-4 text-green-700" />
-                    <span className="text-xs md:text-sm font-medium text-green-800">
+                    <badge.icon className="w-3 h-3 sm:w-4 sm:h-4 text-green-700 flex-shrink-0" />
+                    <span className="text-[9px] sm:text-xs md:text-sm font-medium text-green-800 whitespace-nowrap">
                       {badge.text}
                     </span>
                   </>;
-              return badge.link ? <a key={index} href={badge.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md hover:bg-white transition-colors">
+              return badge.link ? <a key={index} href={badge.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 sm:py-1.5 border border-green-600/30 shadow-md hover:bg-white transition-colors flex-shrink-0">
                     {BadgeContent}
-                  </a> : <div key={index} className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md">
+                  </a> : <div key={index} className="flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 sm:py-1.5 border border-green-600/30 shadow-md flex-shrink-0">
                     {BadgeContent}
                   </div>;
             })}
