@@ -4,6 +4,7 @@ import sienaImage from "@/assets/vehicle-siena-2016.jpeg";
 import prismaImage from "@/assets/vehicle-prisma-2009.jpeg";
 import stradaImage from "@/assets/vehicle-strada-2015.jpeg";
 import milleImage from "@/assets/vehicle-mille-economy.jpeg";
+import hb20Image from "@/assets/vehicle-hb20-2022.jpg";
 
 interface Vehicle {
   id: number;
@@ -66,6 +67,18 @@ const vehicles: Vehicle[] = [
     image: milleImage,
     badge: "Econômico",
     tags: ["2 Portas", "Baixo Consumo"],
+  },
+  {
+    id: 5,
+    name: "HYUNDAI HB20",
+    model: "1.0 Flex",
+    year: "2022",
+    fuel: "Flex",
+    km: "45.000 km",
+    price: "R$ 65.000",
+    image: hb20Image,
+    badge: "Destaque",
+    tags: ["Completo", "Baixa KM"],
   },
 ];
 
