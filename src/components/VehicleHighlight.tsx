@@ -50,7 +50,7 @@ const vehicles: Vehicle[] = [
     year: "2015",
     fuel: "Flex",
     km: "95.000 km",
-    price: "R$ 49.900",
+    price: "R$ 42.000",
     image: stradaImage,
     badge: "Trabalho",
     tags: ["Cabine Simples", "Direção Hidráulica"],
