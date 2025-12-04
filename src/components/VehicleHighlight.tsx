@@ -38,7 +38,7 @@ const vehicles: Vehicle[] = [
     year: "2009",
     fuel: "Flex",
     km: "120.000 km",
-    price: "R$ 26.900",
+    price: "R$ 16.500",
     image: prismaImage,
     badge: "Oportunidade",
     tags: ["4 Portas", "Direção Hidráulica"],
