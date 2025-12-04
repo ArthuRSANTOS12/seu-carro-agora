@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Menu, X, MessageCircle, Car } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,11 +21,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center group-hover:bg-navy-light transition-colors">
-              <Car className="w-6 h-6 text-primary-foreground" />
-            </div>
+            <img src={logo} alt="Dan Car Logo" className="w-10 h-10 rounded-xl" />
             <span className="text-xl font-bold text-primary">
-              Garagem <span className="text-accent">Dan Car</span>
+              DAN <span className="text-accent">CAR</span>
             </span>
           </a>
 
