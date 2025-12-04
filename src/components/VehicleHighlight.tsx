@@ -1,24 +1,20 @@
 import { Check, Calendar, Fuel, Gauge, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import vehicleImage from "@/assets/vehicle-saveiro.jpeg";
-
 const VehicleHighlight = () => {
-  const features = [
-    { icon: Calendar, label: "Ano 2010" },
-    { icon: Fuel, label: "Flex" },
-    { icon: Gauge, label: "98.000 km" },
-  ];
-
-  const tags = [
-    "Entrada a partir de 30%",
-    "Parcelas Flexíveis",
-    "IPVA Pago",
-  ];
-
+  const features = [{
+    icon: Calendar,
+    label: "Ano 2010"
+  }, {
+    icon: Fuel,
+    label: "Flex"
+  }, {
+    icon: Gauge,
+    label: "98.000 km"
+  }];
+  const tags = ["Entrada a partir de 30%", "Parcelas Flexíveis", "IPVA Pago"];
   const whatsappLink = "https://wa.me/553891307991?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Fiat%20Palio%202010.%20Gostaria%20de%20simular%20a%20compra.";
-
-  return (
-    <section id="veiculos" className="py-20 md:py-28 bg-muted/50">
+  return <section id="veiculos" className="py-20 md:py-28 bg-muted/50">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -39,11 +35,7 @@ const VehicleHighlight = () => {
             <div className="grid md:grid-cols-2 gap-0">
               {/* Image Section */}
               <div className="relative h-64 md:h-full min-h-[300px]">
-                <img 
-                  src={vehicleImage} 
-                  alt="Volkswagen Saveiro branca" 
-                  className="w-full h-full object-cover"
-                />
+                <img src={vehicleImage} alt="Volkswagen Saveiro branca" className="w-full h-full object-cover" />
                 {/* Badge */}
                 <div className="absolute top-4 left-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold">
                   Oportunidade
@@ -54,32 +46,23 @@ const VehicleHighlight = () => {
               <div className="p-6 md:p-8 flex flex-col justify-between">
                 <div>
                   {/* Title */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-                    Fiat Palio
-                  </h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">FIAT STRADA </h3>
                   <p className="text-muted-foreground mb-6">Fire Economy 1.0 Flex</p>
 
                   {/* Features */}
                   <div className="flex flex-wrap gap-4 mb-6">
-                    {features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-2 text-foreground/80">
+                    {features.map((feature, index) => <div key={index} className="flex items-center gap-2 text-foreground/80">
                         <feature.icon className="w-4 h-4 text-accent" />
                         <span className="text-sm">{feature.label}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="inline-flex items-center gap-1 bg-accent/10 text-accent px-3 py-1.5 rounded-full text-sm font-medium"
-                      >
+                    {tags.map((tag, index) => <span key={index} className="inline-flex items-center gap-1 bg-accent/10 text-accent px-3 py-1.5 rounded-full text-sm font-medium">
                         <Check className="w-3.5 h-3.5" />
                         {tag}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
 
                   {/* Price */}
@@ -111,8 +94,6 @@ const VehicleHighlight = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default VehicleHighlight;
