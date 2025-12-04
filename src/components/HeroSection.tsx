@@ -21,7 +21,7 @@ const HeroSection = () => {
   }];
   return <section className="relative">
       {/* Christmas Background Image */}
-      <img src={heroBg} alt="Promoção de Natal Dancar" className="w-full h-auto block" />
+      <img alt="Promoção de Natal Dancar" className="w-full h-auto block" src="/lovable-uploads/47d19932-a945-4fc9-a503-0d300b0facb0.jpg" />
 
       {/* Content overlay - positioned at bottom of image */}
       <div className="absolute bottom-4 md:bottom-8 left-0 right-0">
@@ -40,34 +40,18 @@ const HeroSection = () => {
             {/* Trust Badges */}
             <div className="flex flex-wrap justify-center gap-2 md:gap-4">
               {badges.map((badge, index) => {
-                const BadgeContent = (
-                  <>
+              const BadgeContent = <>
                     <badge.icon className="w-4 h-4 text-green-700" />
                     <span className="text-xs md:text-sm font-medium text-green-800">
                       {badge.text}
                     </span>
-                  </>
-                );
-                
-                return badge.link ? (
-                  <a
-                    key={index}
-                    href={badge.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md hover:bg-white transition-colors"
-                  >
+                  </>;
+              return badge.link ? <a key={index} href={badge.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md hover:bg-white transition-colors">
                     {BadgeContent}
-                  </a>
-                ) : (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md"
-                  >
+                  </a> : <div key={index} className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-green-600/30 shadow-md">
                     {BadgeContent}
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </div>
         </div>
