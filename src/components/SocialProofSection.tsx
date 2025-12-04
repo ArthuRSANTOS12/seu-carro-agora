@@ -18,10 +18,10 @@ const videos = [
   },
   {
     id: 3,
-    src: "/videos/sorteio-surpresa.mp4",
+    src: "/videos/sorteio-surpresa-novo.mp4",
     title: "Sorteio Surpresa",
     description: "Momentos especiais dos nossos sorteios",
-    thumbnail: "/videos/sorteio-surpresa.mp4",
+    thumbnail: "/videos/sorteio-surpresa-novo.mp4",
   },
 ];
 
