@@ -1,6 +1,7 @@
 import { Check, Calendar, Fuel, Gauge, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import vehicleImage from "@/assets/vehicle-saveiro.jpeg";
+import sienaImage from "@/assets/vehicle-siena-2016.jpeg";
 
 interface Vehicle {
   id: number;
@@ -135,6 +136,18 @@ const vehicles: Vehicle[] = [
     image: vehicleImage,
     badge: "4x2",
     tags: ["Completo", "Único Dono"],
+  },
+  {
+    id: 11,
+    name: "FIAT SIENA",
+    model: "EL 1.0 Flex",
+    year: "2016",
+    fuel: "Flex",
+    km: "85.000 km",
+    price: "R$ 38.900",
+    image: sienaImage,
+    badge: "Econômico",
+    tags: ["Revisado", "Baixo Custo"],
   },
 ];
 
