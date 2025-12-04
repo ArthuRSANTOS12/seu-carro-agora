@@ -5,6 +5,7 @@ import prismaImage from "@/assets/vehicle-prisma-2009.jpeg";
 import stradaImage from "@/assets/vehicle-strada-2015.jpeg";
 import milleImage from "@/assets/vehicle-mille-economy.jpeg";
 import hb20Image from "@/assets/vehicle-hb20-2022.jpg";
+import corollaImage from "@/assets/vehicle-corolla-2016.jpg";
 
 interface Vehicle {
   id: number;
@@ -79,6 +80,18 @@ const vehicles: Vehicle[] = [
     image: hb20Image,
     badge: "Destaque",
     tags: ["Completo", "Baixa KM"],
+  },
+  {
+    id: 6,
+    name: "TOYOTA COROLLA",
+    model: "GLi 1.8 Aut.",
+    year: "2016",
+    fuel: "Flex",
+    km: "85.000 km",
+    price: "R$ 75.000",
+    image: corollaImage,
+    badge: "Premium",
+    tags: ["Automático", "Completo"],
   },
 ];
 
