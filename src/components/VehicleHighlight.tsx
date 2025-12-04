@@ -1,6 +1,7 @@
 import { Check, Calendar, Fuel, Gauge, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import sienaImage from "@/assets/vehicle-siena-2016.jpeg";
+import prismaImage from "@/assets/vehicle-prisma-2009.jpeg";
 
 interface Vehicle {
   id: number;
@@ -27,6 +28,18 @@ const vehicles: Vehicle[] = [
     image: sienaImage,
     badge: "Econômico",
     tags: ["Revisado", "Baixo Custo"],
+  },
+  {
+    id: 2,
+    name: "CHEVROLET PRISMA",
+    model: "Joy 1.0 8V Flex",
+    year: "2009",
+    fuel: "Flex",
+    km: "120.000 km",
+    price: "R$ 26.900",
+    image: prismaImage,
+    badge: "Oportunidade",
+    tags: ["4 Portas", "Direção Hidráulica"],
   },
 ];
 
