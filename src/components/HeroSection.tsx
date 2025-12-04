@@ -12,14 +12,16 @@ const HeroSection = () => {
     icon: BadgeCheck,
     text: "Integrado ao Gov.br"
   }];
-  return <section className="relative min-h-screen flex items-center overflow-hidden" style={{ backgroundColor: '#1a5a2a' }}>
+  return <section className="relative min-h-[60vh] md:min-h-[80vh] lg:min-h-screen flex items-end overflow-hidden" style={{ backgroundColor: '#1a5a2a' }}>
       {/* Christmas Background Image */}
       <div className="absolute inset-0" style={{
         backgroundImage: `url(${heroBg})`,
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat'
       }} />
+      {/* Fallback green background below image */}
+      <div className="absolute inset-0 -z-10" style={{ backgroundColor: '#1a5a2a' }} />
 
       <div className="container-custom relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
