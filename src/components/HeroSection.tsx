@@ -1,4 +1,4 @@
-import { Shield, FileSignature, BadgeCheck, ChevronDown, Gift } from "lucide-react";
+import { Shield, FileSignature, BadgeCheck, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-christmas-banner.jpeg";
 const HeroSection = () => {
@@ -23,37 +23,12 @@ const HeroSection = () => {
 
       <div className="container-custom relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Christmas Promo Badge */}
-          <div className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-2 rounded-full mb-6 opacity-0 animate-fade-in-up shadow-lg" style={{
-          animationDelay: "0s"
-        }}>
-            <Gift className="w-5 h-5" />
-            <span className="font-semibold">🎄 Promoção de Natal - Ganhe uma TV!</span>
-          </div>
-          
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 opacity-0 animate-fade-in-up" style={{
-          animationDelay: "0.1s"
-        }}>
-            Compre Seu Carro e{" "}
-            <span className="text-yellow-400">Ganhe uma TV!</span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-primary-foreground/80 mb-4 max-w-2xl mx-auto opacity-0 animate-fade-in-up" style={{
-          animationDelay: "0.3s"
-        }}>
-            Parcelamos sua entrada em até <strong className="text-yellow-400">12x no A!</strong>
-          </p>
-          <p className="text-base md:text-lg text-primary-foreground/70 mb-8 max-w-2xl mx-auto opacity-0 animate-fade-in-up" style={{
-          animationDelay: "0.35s"
-        }}>
-            Entrada + Parcelas em Notas Promissórias Digitais. <strong className="text-accent">Análise em 20 minutos.</strong>
-          </p>
+          {/* Spacer to push content down */}
+          <div className="h-32 md:h-48" />
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 opacity-0 animate-fade-in-up" style={{
-          animationDelay: "0.5s"
+          animationDelay: "0.3s"
         }}>
             <Button variant="hero" size="xl" asChild>
               <a href="#estoque">Ver Estoque Disponível</a>
@@ -65,11 +40,11 @@ const HeroSection = () => {
 
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-8 opacity-0 animate-fade-in-up" style={{
-          animationDelay: "0.7s"
+          animationDelay: "0.5s"
         }}>
-            {badges.map((badge, index) => <div key={index} className="flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full px-4 py-2 border border-primary-foreground/20">
-                <badge.icon className="w-5 h-5 text-accent" />
-                <span className="text-sm font-medium text-primary-foreground">
+            {badges.map((badge, index) => <div key={index} className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-green-600/30 shadow-md">
+                <badge.icon className="w-5 h-5 text-green-700" />
+                <span className="text-sm font-medium text-green-800">
                   {badge.text}
                 </span>
               </div>)}
