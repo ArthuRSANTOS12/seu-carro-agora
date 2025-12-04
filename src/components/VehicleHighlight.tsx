@@ -114,7 +114,7 @@ const vehicles: Vehicle[] = [
     year: "2018/2019",
     fuel: "Flex",
     km: "83.000 km",
-    price: "R$ 95.000",
+    price: "R$ 90.000",
     image: toroImage,
     badge: "Destaque",
     tags: ["Automático", "Cabine Dupla"],
