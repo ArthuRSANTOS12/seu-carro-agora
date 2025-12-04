@@ -14,11 +14,7 @@ const HeroSection = () => {
   }];
   return <section className="relative">
       {/* Christmas Background Image */}
-      <img 
-        src={heroBg} 
-        alt="Promoção de Natal Dancar" 
-        className="w-full h-auto block"
-      />
+      <img src={heroBg} alt="Promoção de Natal Dancar" className="w-full h-auto block" />
 
       {/* Content overlay - positioned at bottom of image */}
       <div className="absolute bottom-4 md:bottom-8 left-0 right-0">
@@ -30,7 +26,7 @@ const HeroSection = () => {
                 <a href="#estoque">Ver Estoque Disponível</a>
               </Button>
               <Button variant="hero-outline" size="xl" asChild>
-                <a href="#como-funciona">Como Funciona</a>
+                <a href="#como-funciona" className="text-emerald-500">Como Funciona</a>
               </Button>
             </div>
 
