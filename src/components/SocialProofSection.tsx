@@ -5,7 +5,7 @@ const videos = [
   {
     id: 1,
     src: "/videos/entrega-corolla-2025.mp4",
-    title: "Entrega do COROLLA 2025",
+    title: "COROLLA 2025 APROVADO NO APP DAN CAR",
     description: "Cliente contemplado pelo sorteio mensal DAN CAR",
     thumbnail: "/videos/entrega-corolla-2025.mp4",
   },
