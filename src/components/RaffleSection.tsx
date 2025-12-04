@@ -62,7 +62,7 @@ const RaffleSection = () => {
           alt="Carros do sorteio" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/80 via-orange-500/70 to-red-600/80" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <div className="container-custom relative z-10">
