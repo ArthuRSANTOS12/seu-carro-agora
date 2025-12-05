@@ -3,7 +3,7 @@ const WhatsAppButton = () => {
   const message = encodeURIComponent(`🚗✨ Oie Garagem Dan Car
 
 tenho Entrada + promissórias pelo app DAN CAR
-Paque 30% do veículo e o restante serão em notas promissórias digitais.
+Quero dar 30% do veículo e o restante serão em notas promissórias digitais.
 Sem banco, sem financiamento e sem burocracia.
 
 EU QUERO APROVAR DAN CAR
